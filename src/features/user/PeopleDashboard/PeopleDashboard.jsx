@@ -1,6 +1,6 @@
 import React from 'react'
 
- const PeopleDashnboard = () => {
+ const PeopleDashboard = () => {
     return (
         <div>
             <h1>People Dashboard</h1>
