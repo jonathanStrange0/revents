@@ -5,6 +5,7 @@ import { Button } from "semantic-ui-react";
 
 const mapStateToProps = (state) => ({
   data: state.data,
+  events: state.events
 });
 
 const actions = {
@@ -14,7 +15,9 @@ const actions = {
 
 class TestComponent extends Component {
   render() {
-      const {data, incrementCounter, decrementCounter} = this.props
+      const {events, data, incrementCounter, decrementCounter} = this.props
+      console.log(events);
+      
     return (
       <div>
         <h1>Test Component</h1>
