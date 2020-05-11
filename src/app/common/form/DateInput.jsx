@@ -8,7 +8,7 @@ const DateInput = ({
   width,
   placeholder,
   meta: { touched, error },
-  ...rest
+  ...rest 
 }) => {
   return (
     <Form.Field error={touched && !!error}>
