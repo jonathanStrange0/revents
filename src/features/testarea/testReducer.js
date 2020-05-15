@@ -6,7 +6,10 @@ const initialState = {
 };
 
 const incrementCounter = (state) => {
-  return { ...state, data: state.data + 1 };
+  return {
+    ...state,
+    data: state.data + 1,
+  };
 };
 
 const decrementCounter = (state) => {
@@ -18,5 +21,5 @@ const decrementCounter = (state) => {
 
 export default createReducer(initialState, {
   [INCREMENT_COUNTER]: incrementCounter,
-  [DECREMENT_COUNTER]: decrementCounter
+  [DECREMENT_COUNTER]: decrementCounter,
 });
