@@ -24,8 +24,8 @@ class EventListItem extends Component {
         <Segment>
           <span>
             <Icon name='clock' />
-            {format(parseISO(event.date), "EEEE do LLL")} at{" "}
-            {format(parseISO(event.date), "h:mm a")} |
+            {format(event.date.toDate(), "EEEE do LLL")} at{" "}
+            {format(event.date.toDate(), "h:mm a")} |
             <Icon name='marker' /> {event.venue}
           </span>
         </Segment>
@@ -33,8 +33,8 @@ class EventListItem extends Component {
           <List horizontal>
             {/* && only executes the RHS of expression if the LHS is true. */}
             {event.attendees &&
-              event.attendees.map((attendee) => (
-                <EventListAttendee key={attendee.id} attendee={attendee} />
+              Object.values(event.attendees).map((attendee, index) => (
+                <EventListAttendee key={index} attendee={attendee} />
               ))}
           </List>
         </Segment>
