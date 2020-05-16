@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import { Segment, Item, Icon, List, Button } from "semantic-ui-react";
 import EventListAttendee from "./EventListAttendee";
 import { Link } from "react-router-dom";
+import { format, parseISO } from "date-fns";
 
 class EventListItem extends Component {
   render() {
     const { event, deleteEvent } = this.props;
+    console.log(event.date);
+    
     return (
       <Segment.Group>
         <Segment>
@@ -21,7 +24,9 @@ class EventListItem extends Component {
         </Segment>
         <Segment>
           <span>
-            <Icon name='clock' /> {event.date.toString()} |
+            <Icon name='clock' />
+            {format(parseISO('2018-03-21:19:00:00'), "EEEE do LLL")} at{" "}
+            {format(parseISO('2018-03-21:19:00:00'), "h:mm a")} |
             <Icon name='marker' /> {event.venue}
           </span>
         </Segment>
