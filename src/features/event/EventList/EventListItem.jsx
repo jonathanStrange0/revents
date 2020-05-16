@@ -7,7 +7,6 @@ import { format, parseISO } from "date-fns";
 class EventListItem extends Component {
   render() {
     const { event, deleteEvent } = this.props;
-    console.log(event.date);
 
     return (
       <Segment.Group>
