@@ -8,7 +8,7 @@ class EventListItem extends Component {
   render() {
     const { event, deleteEvent } = this.props;
     console.log(event.date);
-    
+
     return (
       <Segment.Group>
         <Segment>
@@ -25,8 +25,8 @@ class EventListItem extends Component {
         <Segment>
           <span>
             <Icon name='clock' />
-            {format(parseISO('2018-03-21:19:00:00'), "EEEE do LLL")} at{" "}
-            {format(parseISO('2018-03-21:19:00:00'), "h:mm a")} |
+            {format(parseISO(event.date), "EEEE do LLL")} at{" "}
+            {format(parseISO(event.date), "h:mm a")} |
             <Icon name='marker' /> {event.venue}
           </span>
         </Segment>
