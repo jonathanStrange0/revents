@@ -10,7 +10,7 @@ const SettingsNav = () => {
         <Menu.Item as={NavLink} to='/settings/basic'>
           Basics
         </Menu.Item>
-        <Menu.Item as={NavLink} to='/settings/account'>
+        <Menu.Item as={NavLink} to='/settings/about'>
           About Me
         </Menu.Item>
         <Menu.Item as={NavLink} to='/settings/photos'>
@@ -26,7 +26,9 @@ const SettingsNav = () => {
           color='grey'
           content='Account'
         />
-        <Menu.Item>My Account</Menu.Item>
+        <Menu.Item as={NavLink} to='/settings/account'>
+          My Account
+        </Menu.Item>
       </Menu>
     </Fragment>
   );
