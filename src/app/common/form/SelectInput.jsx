@@ -16,7 +16,7 @@ const SelectInput = ({
         onChange={(e, data) => input.onChange(data.value)}
         placeholder={placeholder}
         options={options}
-        multpile={multiple}
+        multiple={multiple}
       />
       {touched && error && 
         <Label basic color='red'>

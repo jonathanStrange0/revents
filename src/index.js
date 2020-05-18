@@ -40,6 +40,8 @@ if (module.hot) {
   });
 }
 
+
+// application will not render components until firebase says the authorization is good to go
 store.firebaseAuthIsReady.then(() =>{
   render();
 })
