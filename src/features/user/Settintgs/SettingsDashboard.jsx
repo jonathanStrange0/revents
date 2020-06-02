@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import SettingsNav from "./SettingsNav";
 import { Route, Redirect, Switch } from "react-router-dom";
 import BasicPage from "./BasicPage";
-import PhotosPage from "./PhotosPage";
+import PhotosPage from "./Photos/PhotosPage";
 import AboutPage from "./AboutPage";
 import AccountPage from "./AccountPage";
 import { updatePassword } from "../../auth/authActions";

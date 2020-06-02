@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Segment, Form, Header, Divider, Button, Label } from "semantic-ui-react";
+import {
+  Segment,
+  Form,
+  Header,
+  Divider,
+  Button,
+  Label,
+} from "semantic-ui-react";
 import { Field, reduxForm } from "redux-form";
 import DateInput from "../../../app/common/form/DateInput";
 import PlaceInput from "../../../app/common/form/PlaceInput";
@@ -9,7 +16,7 @@ import { addYears } from "date-fns";
 
 class Basic extends Component {
   render() {
-    const { pristine, submitting, handleSubmit, updateProfile} = this.props;
+    const { pristine, submitting, handleSubmit, updateProfile } = this.props;
     return (
       <Segment>
         <Header dividing size='large' content='Basics' />
@@ -22,7 +29,7 @@ class Basic extends Component {
             placeholder='Known As'
           />
           <Form.Group inline>
-              <Label>Gender: </Label>
+            <Label>Gender: </Label>
             <Field
               name='gender'
               type='radio'
@@ -70,6 +77,8 @@ class Basic extends Component {
   }
 }
 
-export default reduxForm({ form: "userProfile", enableReinitialize: true, destroyOnUnmount: false })(
-  Basic
-);
+export default reduxForm({
+  form: "userProfile",
+  enableReinitialize: true,
+  destroyOnUnmount: false,
+})(Basic);
